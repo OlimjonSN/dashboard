@@ -1,11 +1,30 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:dashboard/style/colors.dart';
+import 'package:flutter/material.dart';
 
-class Dashboard extends StatelessWidget {
+import 'companents/sideMenu.dart';
+
+class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
   @override
+  State<Dashboard> createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SafeArea(
+          child: Row(
+        children: [
+          const Expanded(flex: 1, child: sideMenu()),
+          Expanded(
+              flex: 15,
+              child: Container(
+                color: AppColors.primaryBG,
+              ))
+        ],
+      )),
+    );
   }
 }

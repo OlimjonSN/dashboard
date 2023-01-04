@@ -7,6 +7,7 @@ void main() {
   runApp(const MyApp());
 }
 
+//https://youtu.be/BAc5OHF3emU
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Dashboard',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
           scaffoldBackgroundColor: AppColors.primaryBG),
       home: const Dashboard(),
     );
